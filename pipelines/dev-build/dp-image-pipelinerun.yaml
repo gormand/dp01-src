@@ -67,10 +67,10 @@ spec:
 
       # Copy fixed YAMLs to datapower gitops repo
       mkdir -p $(workspaces.source.path)/repo/ops/environments/dev/dp01/gateway01
-      cp gateways/gateway01/gateway.yaml $(workspaces.source.path)/repo/ops/environments/dev/dp01/gateway01/.
-      cp gateways/gateway01/booking-service-ingress.yaml $(workspaces.source.path)/repo/ops/environments/dev/dp01/gateway01/.
-      cp gateways/gateway01/booking-service-service.yaml $(workspaces.source.path)/repo/ops/environments/dev/dp01/gateway01/.
-      cp gateways/gateway01/gateway-webui-service.yaml $(workspaces.source.path)/repo/ops/environments/dev/dp01/gateway01/.
+      cp gateways/gateway01/yamls/gateway.yaml $(workspaces.source.path)/repo/ops/environments/dev/dp01/gateway01/.
+      cp gateways/gateway01/yamls/booking-service-ingress.yaml $(workspaces.source.path)/repo/ops/environments/dev/dp01/gateway01/.
+      cp gateways/gateway01/yamls/booking-service-service.yaml $(workspaces.source.path)/repo/ops/environments/dev/dp01/gateway01/.
+      cp gateways/gateway01/yamls/gateway-webui-service.yaml $(workspaces.source.path)/repo/ops/environments/dev/dp01/gateway01/.
 
       # Copy generated kubernetes artefacts to datapower gitops repo
       cp booking-service-local.yaml $(workspaces.source.path)/repo/ops/environments/dev/dp01/gateway01/.
