@@ -63,54 +63,6 @@ oc login
 
 ---
 
-## install sample hello-world task
-  - `oc apply -f hello-world.yaml`
-  - `task.tekton.dev/hello created`
-
----
-
-## run sample task
-  - `oc create -f hello-world-run.yaml`
-  - `taskrun.tekton.dev/hello-task-run-v8q99 created` (e.g.)
-
----
-
-## view task log
-  - `tkn taskrun logs hello-task-run-v8q99`
-  - `[echo] Hello World`
-
----
-
-## review task
-  - (brief walk through of YAMLs)
-  - explore in console (optional for openshift) 
-
----
-
-## Set up pipeline
-  - `√ sample % oc apply -f goodbye-world.yaml`
-  - `task.tekton.dev/goodbye created`
-  - `√ sample % oc apply -f hello-goodbye-pipeline.yaml`
-  - `pipeline.tekton.dev/hello-goodbye created`
-
----
-
-## run sample pipeline
-  - `√ sample % oc create  -f hello-goodbye-pipeline-run.yaml`
-  - `pipelinerun.tekton.dev/hello-goodbye-run-v5wmb created`
-  - `√ sample % tkn pipelinerun logs hello-goodbye-run-v5wmb`
-  - `Pipeline still running ...`
-  - `[hello : echo] Hello World`
-  - `[goodbye : goodbye] Goodbye World!`
-
----
-
-## review pipeline
-  - (brief walk through of YAMLs) 
-  - explore in console (optional for openshift) 
-
----
-
 ## Locate Datapower pipeline source
 
 ```bash
